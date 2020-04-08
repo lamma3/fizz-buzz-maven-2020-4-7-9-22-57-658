@@ -2,27 +2,23 @@ package com.oocl;
 
 public class FizzBuzz {
     
-    private final static String FIZZ = "Fizz";
-    private final static String BUZZ = "Buzz";
+    private final static String FIZZ_STRING = "Fizz";
+    private final static String BUZZ_STRING = "Buzz";
 
     public String say(int number) {
-        if (isDivisibleBy3(number) && isDivisibleBy5(number)) {
-            return FIZZ + BUZZ;
+        if (isDivisible(number, 15)) {
+            return FIZZ_STRING + BUZZ_STRING;
         }
-        if (isDivisibleBy3(number)) {
-            return FIZZ;
+        if (isDivisible(number, 3)) {
+            return FIZZ_STRING;
         }
-        if (isDivisibleBy5(number)) {
-            return BUZZ;
+        if (isDivisible(number, 5)) {
+            return BUZZ_STRING;
         }
         return String.valueOf(number);
     }
 
-    private boolean isDivisibleBy3(int number) {
-        return number % 3 == 0;
-    }
-
-    private boolean isDivisibleBy5(int number) {
-        return number % 5 == 0;
+    private boolean isDivisible(int number, int divisor) {
+        return number % divisor == 0;
     }
 }
