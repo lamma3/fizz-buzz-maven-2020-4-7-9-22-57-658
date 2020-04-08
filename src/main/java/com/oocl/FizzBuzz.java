@@ -6,6 +6,9 @@ public class FizzBuzz {
     private final static String BUZZ = "Buzz";
 
     public String say(int number) {
+        if (isDivisibleBy3(number) && isDivisibleBy5(number)) {
+            return FIZZ + BUZZ;
+        }
         if (isDivisibleBy3(number)) {
             return FIZZ;
         }
