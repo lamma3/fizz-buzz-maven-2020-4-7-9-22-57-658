@@ -25,4 +25,11 @@ public class FizzBuzzTest {
         String result = fizzBuzz.say(5);
         Assert.assertEquals("Buzz", result);
     }
+
+    @Test
+    public void test_say_when_receive15_then_returnFizzBuzz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.say(15);
+        Assert.assertEquals("FizzBuzz", result);
+    }
 }
