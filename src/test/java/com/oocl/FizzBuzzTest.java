@@ -18,4 +18,11 @@ public class FizzBuzzTest {
         String result = fizzBuzz.say(3);
         Assert.assertEquals("Fizz", result);
     }
+
+    @Test
+    public void test_say_when_receive5_then_returnBuzz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.say(5);
+        Assert.assertEquals("Buzz", result);
+    }
 }
